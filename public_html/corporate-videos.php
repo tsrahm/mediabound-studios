@@ -23,7 +23,7 @@
         <div class="title-container-work">Corporate Videos</div>
         <section class="main-container-work">
           <div class="photo-container">
-            <a href="./corporate-videos/video-1.php"><img class="photo" src="../resources/library/images/jets.png"></a>
+            <a href="/public_html/corporate-videos/video-1.php"><img class="photo" src="../resources/library/images/jets.png"></a>
             <span class="photo-description">Description</span>
           </div><!-- 
            --><div class="photo-container">
