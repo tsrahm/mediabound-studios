@@ -9,7 +9,7 @@
 </ul>
 <nav>
   <ul class="nav-headers">
-    <li><a href="/index.php">Home</a></li>
+    <li><a href="./index.php">Home</a></li>
     <li class="spacer"><span>~</span></li>
     <li class="nav-header-dropdown">
       <a cursor="pointer" href="#">About</a>
@@ -24,7 +24,7 @@
     <li class="nav-header-dropdown">
       <a href="#">Work</a>
       <ul class="nav-sub-headers nav-sub-work">
-        <li><a href="/public_html/corporate-videos.php">Corporate Videos</a></li>
+        <li><a href="./corporate-videos.php">Corporate Videos</a></li>
         <li><a href="#">Web Series Videos</a></li>
         <li><a href="#">Commercials</a></li>
         <li><a href="#">Documentaries</a></li>
