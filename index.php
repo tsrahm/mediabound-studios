@@ -10,7 +10,7 @@
   <body>
     <header></header>
     <main>
-      <a href="./public_html/index.php"></a>
+      <a href="./public_html/index.php">Home</a>
     </main>
     <footer></footer>
   </body>
