@@ -9,10 +9,10 @@
 </ul>
 <nav>
   <ul class="nav-headers">
-    <li><a href="/mediabound/public_html/index.php">Home</a></li>
+    <li><a href="/index.php">Home</a></li>
     <li class="spacer"><span>~</span></li>
     <li class="nav-header-dropdown">
-      <a cursor="pointer" href="index.php">About</a>
+      <a cursor="pointer" href="#">About</a>
       <ul class="nav-sub-headers nav-sub-about">
         <li><a href="#">Sizzle Reel</a></li>
         <li><a href="#">Why Video</a></li>
@@ -22,9 +22,9 @@
     </li>
     <li class="spacer"><span>~</span></li>
     <li class="nav-header-dropdown">
-      <a href="index.php">Work</a>
+      <a href="#">Work</a>
       <ul class="nav-sub-headers nav-sub-work">
-        <li><a href="/mediabound/public_html/corporate-videos.php">Corporate Videos</a></li>
+        <li><a href="/public_html/corporate-videos.php">Corporate Videos</a></li>
         <li><a href="#">Web Series Videos</a></li>
         <li><a href="#">Commercials</a></li>
         <li><a href="#">Documentaries</a></li>
@@ -33,6 +33,6 @@
       </ul>
     </li>
     <li class="spacer"><span>~</span></li>
-    <li><a href="index.php">Contact</a></li>
+    <li><a href="#">Contact</a></li>
   </ul>
 </nav>
