@@ -1,3 +1,5 @@
+<?php $siteroot = '/mediabound-studios/public_html'; ?>
+<?php $resources = '/mediabound-studios/resources'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,9 +7,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen|Slabo+27px|Taviraj:400,500,600,700,800,900" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="/images/animal-paw-print_green-t.png">
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Dosis|Arima+Madurai|Neucha|Athiti|McLaren|Itim|Cagliostro|Proza+Libre|Happy+Monkey" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" type="text/css" href="<?= $siteroot; ?>/css/index.css">
     <script src="https://use.fontawesome.com/d343e84307.js"></script>
 <!--
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-custom2.min.css">
@@ -23,23 +25,23 @@
         <section class="main-container-home">
           <div class="photo-container">
             <div class="photo-clipper">
-              <img class="photo" src="../resources/library/images/jets.png">
+              <img class="photo" src="<?= $resources; ?>/library/images/jets.png">
             </div>
-            <h3>Why Us?</h3>
+            <p class="photo-title">Why Us?</p>
             <p>Description here.</p>
           </div>
           <div class="photo-container">
             <div class="photo-clipper">
-              <img class="photo" src="../resources/library/images/lizard.png">
+              <img class="photo" src="<?= $resources; ?>/library/images/lizard.png">
             </div>
-            <h3>What We Can Do For You</h3>
+            <p class="photo-title">What We Can Do For You</p>
             <p>Description here.</p>
           </div>
           <div class="photo-container">
             <div class="photo-clipper">
-              <img class="photo" src="../resources/library/images/bubbles.png">
+              <img class="photo" src="<?= $resources; ?>/library/images/bubbles.png">
             </div>
-            <h3>Current Projects</h3>
+            <p class="photo-title">Current Projects</p>
             <p>Description here.</p>
           </div>
         </section>
@@ -73,7 +75,7 @@
         <?php include '../resources/templates/footer.php'; ?>
       </footer>
     </div>
-    <script type="text/javascript" async="async" defer="defer" src="./js/header.js"></script>
+    <script type="text/javascript" async="async" defer="defer" src="<?= $siteroot; ?>/js/header.js"></script>
   </body>
 </html>
 

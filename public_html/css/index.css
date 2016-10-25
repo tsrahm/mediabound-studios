@@ -8,8 +8,11 @@ body {
   background: transparent;
 }
 p, h1, h2, h3, h4, h5, h6, ul, li, span, div, section {
-  font-family: 'Taviraj';
+  font-family: 'athiti';
   text-align: center;
+}
+li {
+  list-style: none;
 }
 
 /* Header --------------------------------------------------------- */
@@ -17,7 +20,7 @@ header {
   position: relative;
   width: 100%;
   height: 125px;
-  border-bottom: 3px solid rgba(224, 172, 31, 0.1);
+  border-bottom: 2px solid rgba(224, 172, 31, 0.1);
 }
 .header-branding {
   position: relative;
@@ -27,28 +30,16 @@ header {
   overflow-y: hidden;
 }
 .header-branding .logo {
-  /*font: 30px verdana;*/
-  font-size: 150px;
-  color: #eee;
-}
-.header-branding .logo-1{
-  position: absolute;
-  top: -125px;
-  left: 20px;
-  font-size: 250px;
-  color: #eee;
-  opacity: .3;
-}
-.header-branding .logo-2{
   position: relative;
-  top: 38px;
+  top: 35px;
   left: 20px;
   font-size: 50px;
+  font-weight: 700px;
   color: #222;
 }
 .header-contact {
   position: absolute;
-  top: 0;
+  top: 5px;
   right: 50px;
   width: auto;
   height: auto;
@@ -57,9 +48,7 @@ header {
 }
 .header-contact li {
   display: inline;
-  /*font: 12px verdana;*/
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 13px;
   color: #999;
 }
 header nav {
@@ -69,12 +58,9 @@ header nav {
   width: 50%;
   height: 100%;
 }
-li {
-  list-style: none;
-}
 .nav-headers {
   position: absolute;
-  bottom: 0;
+  bottom: 3px;
   right: 50px;
   width: auto;
   height: 50px;
@@ -84,14 +70,16 @@ li {
 .nav-headers > li {
   display: inline;
 }
-.nav-headers .spacer {
+.spacer span {
   padding: 0 12px;
+  font-size: 14px;
+  color: #999;
 }
 .nav-headers li a {
   padding-bottom: 35px;
-  font: 13px verdana;
-  /*font-size: 15px;*/
-  font-weight: 600;
+  /*font: 13px verdana;*/
+  font-size: 16px;
+  /*font-weight: 600;*/
   text-decoration: none;
   color: #222;
 }
@@ -99,7 +87,7 @@ li {
   position: absolute;
   width: 170px;
   height: auto;
-  top: 52px;
+  top: 55px;
   background-color: #fff;
   border-right: 0px solid rgba(224, 172, 31, 0.2);
   border-bottom: 0px solid rgba(224, 172, 31, 0.2);
@@ -116,14 +104,13 @@ li {
 }
 .nav-sub-headers li a {
   display: block;
-  padding-top: 8px;
-  padding-bottom: 0;
+  padding: 2px 0 6px;
   height: 26px;
-  font: 14px verdana, sans-serif;
+  /*font: 14px verdana, sans-serif;*/
   /*font-size: 14px;*/
 }
 .nav-sub-headers.nav-sub-about {
-  right: 134px;
+  right: 95px;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s linear 400ms, opacity 400ms;
@@ -134,7 +121,7 @@ li {
   transition: visibility 0s linear 0s, opacity 400ms;
 }
 .nav-sub-headers.nav-sub-work {
-  right: 40px;
+  right: 20px;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s linear 400ms, opacity 400ms;
@@ -159,6 +146,7 @@ li {
   width: calc(33% - 81px);
   height: 25vw;
   margin: 0 40px;
+  vertical-align: top;
 }
 .main-container-home .photo-container .photo-clipper {
   position: relative;
@@ -170,15 +158,15 @@ li {
   position: relative;
   width: 100%;
 }
-.main-container-home h3 {
-  font-weight: 500;
+.main-container-home .photo-title {
+  font-size: 19px;
   margin-bottom: 0;
   margin-top: 5px;
 }
 .main-container-home p {
-  font-weight: 500;
   font-size: 15px;
-  margin-top: 5px;
+  margin-bottom: 0;
+  margin-top: 10px;
 }
 .icon-container-home {
   position: relative;
@@ -228,7 +216,7 @@ li {
 /* Work Page -------------------------------------------------------- */
 .title-container-work {
   height: 6vw;
-  line-height: 6.6vw;
+  line-height: 6vw;
   font-size: 8vw;
   opacity: .08;
   overflow-y: hidden;
@@ -288,28 +276,112 @@ li {
 }
 
 /* Video Page --------------------------------------------------------- */
+.title-container-video {
+  height: 6vw;
+  width: 70%;
+  line-height: 6vw;
+  font-size: 8vw;
+  opacity: .08;
+  overflow-y: hidden;
+  letter-spacing: 2vw;
+  text-align: center;
+}
+.background-container-video {
+  position: relative;
+  background-color: #f6f6f6;
+  font-size: 0px;
+  padding: 3vw 0;
+}
+.main-container-video {
+  position: relative;
+  display: inline-block;
+  width: 70%;
+  height: 40vw;
+}
+.container-video-border {
+  position: absolute;
+  height: 46vw;
+  border-right: 2px solid rgba(224, 172, 31, 0.1);
+  right: 30%;
+  top: 0;
+}
 .video-container {
-  width: 50vw;
+  height: 40vw;
+}
+.side-container-video {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  height: 40vw;
+  padding-left: 5%;
+}
+.side-container-video-title {
+  position: relative;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+}
+.side-container-video-item {
+  position: relative;
+  margin-bottom: 12px;
+}
+.side-container-video-thumbnail {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+}
+.side-container-video-description {
+  position: relative;
+  display: inline-block;
+  width: 75%;
+  padding-left: 5%;
+  font-size: 13px;
+  text-align: left;
+  color: #222;
+  vertical-align: top;
+  /*top: 15px;*/
+}
+.side-container-video-description.this-video {
+  color: rgba(224, 172, 31, 0.8);
 }
 
 /* Footer ------------------------------------------------------------- */
+.footer-container {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  background-color: #222;
+}
 .footer-spacer {
   position: relative;
   width: 100%;
   height: 30px;
-  /*background-color: rgba(224, 172, 31, .7);*/
+  line-height: 30px;
   background-color: #666;
 }
-.footer-container {
-  position: relative;
-  width: 100%;
-  height: 60px;
-  background-color: #222;
+.letter-logo {
+  position: absolute;
+  top: 2px;
+  color: #ddd;
+  font-size: 16px;
+}
+.ll-1 {
+  right: 50%;
+}
+.ll-2 {
+  right: calc(50% - 15px);
+}
+.ll-3 {
+  right: calc(50% + 15px);
 }
 .footer-icons {
   position: relative;
   width: 50%;
-  height: 100%;
+  height: 60px;
   padding: 0;
   padding-left: 40px;
   margin: 0;
@@ -330,12 +402,13 @@ li {
 footer .branding {
   position: absolute;
   width: 50%;
-  height: 100%;
+  height: 60px;
   bottom: 0;
   right: 0;
   text-align: right;
   line-height: 60px;
   color: #ddd;
+  font-size: 18px;
   padding-right: 60px;
 }
 
