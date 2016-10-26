@@ -157,6 +157,12 @@ header nav {
 .main-container-home .photo-container .photo-clipper .photo {
   position: relative;
   width: 100%;
+  opacity: 0;
+  animation: load-pictures 2s 100ms forwards;
+}
+@keyframes load-pictures {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 .main-container-home .photo-title {
   font-size: 19px;
@@ -228,11 +234,12 @@ header nav {
   width: 100%;
   height: auto;
   padding: 0;
+  font-size: 0;
 }
 .main-container-work .photo-container {
   position: relative;
   display: inline-block;
-  width: 33.3%;
+  width: 33.333%;
   height: 24vw;
   margin: 0;
   overflow: hidden;

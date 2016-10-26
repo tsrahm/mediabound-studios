@@ -1,5 +1,5 @@
-<!-- <?php $siteroot = '/mediabound-studios/public_html'; ?> -->
-<!-- <?php $resources = '/mediabound-studios/resources'; ?> -->
+<?php $siteroot = '/mediabound-studios/public_html'; ?>
+<?php $resources = '/mediabound-studios/resources'; ?>
 <?php $siteroot = '/public_html'; ?>
 <?php $resources = '/resources'; ?>
 <!DOCTYPE html>
@@ -25,24 +25,24 @@
           <div class="photo-container">
             <a href="<?= $siteroot; ?>/corporate-videos/video-1.php"><img class="photo" src="<?= $resources; ?>/library/images/jets.png"></a>
             <span class="photo-description">Description</span>
-          </div><!-- 
-           --><div class="photo-container">
+          </div>
+          <div class="photo-container">
             <img class="photo" src="<?= $resources; ?>/library/images/lizard.png">
             <span class="photo-description">Description</span>
-          </div><!-- 
-           --><div class="photo-container">
+          </div>
+          <div class="photo-container">
             <img class="photo" src="<?= $resources; ?>/library/images/bubbles.png">
             <span class="photo-description">Description</span>
-          </div><!-- 
-           --><div class="photo-container">
+          </div>
+          <div class="photo-container">
             <img class="photo" src="<?= $resources; ?>/library/images/sunset.png">
             <span class="photo-description">Description</span>
-          </div><!-- 
-           --><div class="photo-container">
+          </div>
+          <div class="photo-container">
             <img class="photo" src="<?= $resources; ?>/library/images/coffee.png">
             <span class="photo-description">Description</span>
-          </div><!-- 
-           --><div class="photo-container">
+          </div>
+          <div class="photo-container">
             <img class="photo" src="<?= $resources; ?>/library/images/waterfall.png">
             <span class="photo-description">Description</span>
           </div>

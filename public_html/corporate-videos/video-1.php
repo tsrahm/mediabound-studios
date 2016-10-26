@@ -1,5 +1,5 @@
-<!-- <?php $siteroot = '/mediabound-studios/public_html'; ?> -->
-<!-- <?php $resources = '/mediabound-studios/resources'; ?> -->
+<?php $siteroot = '/mediabound-studios/public_html'; ?>
+<?php $resources = '/mediabound-studios/resources'; ?>
 <?php $siteroot = '/public_html'; ?>
 <?php $resources = '/resources'; ?>
 <!DOCTYPE html>
