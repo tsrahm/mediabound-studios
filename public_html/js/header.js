@@ -1,5 +1,7 @@
 var navHeaderDropdown = document.getElementsByClassName('nav-header-dropdown');
-
+var smallNavIcon = document.querySelector('.small-nav-icon');
+var smallNav = document.querySelector('.small-nav');
+var navClose = document.querySelector('.nav-close');
 
 var header = {
   init: function() {
@@ -9,91 +11,52 @@ var header = {
     this.unbindEvents();
     this.bindEvents();   
   },
-  showMenu: function() {
-    var el = this.querySelector('ul');
-    el.classList.add('visible');
-  },
-  hideMenu: function() {
-    var el = this.querySelector('ul');
-    el.classList.remove('visible');
-  },
   unbindEvents: function() {
+    this.unbindHoverEvents();
+    this.unbindClickEvents();
+  },
+  unbindHoverEvents: function() {
     for (var i = 0; i < navHeaderDropdown.length; i++) {
       navHeaderDropdown[i].removeEventListener('mouseenter', this.showMenu);
       navHeaderDropdown[i].removeEventListener('mouseleave', this.hideMenu);
     }
   },
+  unbindClickEvents: function() {
+    smallNavIcon.removeEventListener('click', this.showSmallNav);
+    navClose.removeEventListener('click', this.hideSmallNav);
+  },
   bindEvents: function() {
     this.bindHoverEvents();
+    this.bindClickEvents();
   },
   bindHoverEvents: function() {
     for (var i = 0; i < navHeaderDropdown.length; i++) {
       navHeaderDropdown[i].addEventListener('mouseenter', this.showMenu);
       navHeaderDropdown[i].addEventListener('mouseleave', this.hideMenu);
     }
-    // var $homeLink = $('.dyba-nav-logo');
-    // $homeLink.hover(function(e) {
-    //   var $el = $(this);
-    //   var $hidden = $('.home-hidden');
-    //   $el.hoverFlow(e.type, {opacity: 0.2}, 500);
-    //   $hidden.hoverFlow(e.type, {opacity: 1}, 500);
-    // }, function(e) {
-    //   var $el = $(this);
-    //   var $hidden = $('.home-hidden');
-    //   $el.hoverFlow(e.type, {opacity: 1}, 500);
-    //   $hidden.hoverFlow(e.type, {opacity: 0}, 500);
-    // });
+  },
+  bindClickEvents: function() {
+    smallNavIcon.addEventListener('click', this.showSmallNav);
+    navClose.addEventListener('click', this.hideSmallNav);
+  },
+  showMenu: function() {
+    var el = this.querySelector('ul');
+    el.classList.add('show');
+  },
+  hideMenu: function() {
+    var el = this.querySelector('ul');
+    el.classList.remove('show');
+  },
+  showSmallNav: function() {
+    smallNavIcon.classList.add('hide');
+    smallNav.classList.add('show');
+  },
+  hideSmallNav: function() {
+    smallNavIcon.classList.remove('hide');
+    smallNav.classList.remove('show');
+  }
+};
 
-    // var $linkContainer = $('.dyba-nav-link-container');
-    // $linkContainer.hover(function() {
-    //   var $el = $(this);
-    //   var $link = $el.find('.dyba-nav-link');
-    //   $link.css({color: '#999', textDecoration: 'none'});
-    // }, function() {
-    //   var $el = $(this);
-    //   var $link = $el.find('.dyba-nav-link');
-    //   $link.css({color: 'black'});
-    // });
-
-    // var $dropdownContainermd = $('.dyba-nav-container-md .dyba-nav-dropdown-container');
-    // $dropdownContainermd.hover(function(e) {
-    //   var $el = $(this);
-    //   var $header = $el.find('.dyba-nav-dropdown-header');
-    //   var $dropdown = $el.find('.dyba-nav-dropdown-menu');
-    //   $header.css({color: '#999', textDecoration: 'none'});
-    //   $dropdown.hoverFlow(e.type, {
-    //     height: 'show',
-    //     marginTop: 'show',
-    //     marginBottom: 'show',
-    //     paddingTop: 'show',
-    //     paddingBottom: 'show'
-    //   });
-    // }, function(e) {
-    //   var $el = $(this);
-    //   var $header = $el.find('.dyba-nav-dropdown-header');
-    //   var $dropdown = $el.find('.dyba-nav-dropdown-menu');
-    //   $el.delay(400)
-    //     .queue(function(next) {
-    //       $header.css({color: 'black'});
-    //       next();
-    //     });
-    //   $dropdown.hoverFlow(e.type, {
-    //     height: 'hide',
-    //     marginTop: 'hide',
-    //     marginBottom: 'hide',
-    //     paddingTop: 'hide',
-    //     paddingBottom: 'hide'
-    //   });
-    // });
-
-    // var $roar = $('.roar');
-    // $roar.click(function(){
-    //   $('<audio>').attr({
-    //     'src': '/images/jaguar.mp3',
-    //     'volume': 1.0,
-    //     'autoplay': 'autoplay'
-    //   }).appendTo('body');
-    // });
 
     // $(window).scroll(function() {
     //   if ($(this).scrollTop() > 99 && $(window).width() > 767) {
@@ -105,25 +68,5 @@ var header = {
     //   }
     // });
 
-    // var $footerCreditsMD = $('.dyba-footer-credits.col-md-4');
-    // $footerCreditsMD.hover(function() {
-    //   var $el = $(this);
-    //   var $popup = $el.find('.dyba-footer-credits-popup');
-    //   $popup.toggle();
-    // }, function() {
-    //   var $el = $(this);
-    //   var $popup = $el.find('.dyba-footer-credits-popup');
-    //   $popup.toggle();
-    // });
-
-    // var $footerCreditsXS = $('.dyba-footer-credits.col-xs-12');
-    // $footerCreditsXS.click(function() {
-    //   var $el = $(this);
-    //   var $popup = $el.find('.dyba-footer-credits-popup');
-    //   $popup.toggle();
-    // });
-
-  }
-};
-
 header.init();
+

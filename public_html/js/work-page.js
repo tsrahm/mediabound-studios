@@ -16,9 +16,6 @@ var popImage = {
     }
   },
   bindEvents: function() {
-    this.bindHoverEvents();
-  },
-  bindHoverEvents: function() {
     for (var i = 0; i < workPageImages.length; i++) {
       workPageImages[i].addEventListener('mouseenter', this.selectImage);
       workPageImages[i].addEventListener('mouseleave', this.unselectImage);
