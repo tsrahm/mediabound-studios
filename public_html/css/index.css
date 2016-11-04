@@ -20,68 +20,54 @@ li {
 
 
 /* Header --------------------------------------------------------- */
-header {
+.header-container {
   position: relative;
   width: 100%;
-  height: 125px;
+  height: 115px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.header-branding {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  padding-top: 35px;
-  padding-left: 20px;
-}
-.header-branding .logo {
-  position: relative;
-  width: 500px;
-}
-.header-contact {
+.header-container .logo {
   position: absolute;
-  top: 5px;
+  width: 350px;
+  bottom: 25px;
+  left: 50px;
+}
+.header-container .header-contact {
+  position: absolute;
+  top: 15px;
   right: 50px;
-  width: auto;
-  height: auto;
-  text-align: right;
-  margin: 5px 0;
   font-size: 0;
 }
-.header-contact li {
+.header-container .header-contact li {
   display: inline;
-  font-size: 13px;
+  font-size: 12px;
   color: #999;
 }
 
 /* Large Nav --------------------------------------------------------- */
 .large-nav {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
+  bottom: -3px;
+  right: 50px;
 }
 .large-nav .nav-headers {
-  position: absolute;
-  bottom: 3px;
-  right: 50px;
-  width: auto;
-  height: 50px;
+  position: relative;
   padding: 0;
   margin: 0;
+  text-align: right;
 }
 .large-nav .nav-headers > li {
   display: inline;
 }
 .spacer span {
   padding: 0 12px;
-  font-size: 14px;
+  font-size: 13px;
   color: #999;
 }
 .large-nav .nav-headers li a {
-  padding-bottom: 35px;
-  font-size: 16px;
+  display: inline-block;
+  height: 50px;
+  font-size: 15px;
   text-decoration: none;
   color: #222;
 }
@@ -89,7 +75,7 @@ header {
   position: absolute;
   width: 170px;
   height: auto;
-  top: 55px;
+  top: 50px;
   background-color: #fff;
   border-right: 0px solid rgba(224, 172, 31, 0.2);
   border-bottom: 0px solid rgba(224, 172, 31, 0.2);
@@ -110,7 +96,7 @@ header {
   height: 26px;
 }
 .large-nav .nav-sub-headers.nav-sub-about {
-  right: 95px;
+  right: 87px;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s linear 400ms, opacity 400ms;
@@ -121,7 +107,7 @@ header {
   transition: visibility 0s linear 0s, opacity 400ms;
 }
 .large-nav .nav-sub-headers.nav-sub-work {
-  right: 20px;
+  right: 15px;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s linear 400ms, opacity 400ms;
@@ -133,7 +119,7 @@ header {
 }
 
 /* Small Nav --------------------------------------------------------- */
-header .small-nav-icon {
+.header-container .small-nav-icon {
   position: absolute;
   bottom: 20px;
   right: 50px;
@@ -146,7 +132,7 @@ header .small-nav-icon {
 }
 .small-nav {
   position: absolute;
-  top: 127px;
+  top: 120px;
   right: 0px;
   width: 320px;
   max-width: 100%;
@@ -184,8 +170,8 @@ header .small-nav-icon {
 .small-nav .nav-container li a {
   display: block;
   padding: 4px 0 2px 8px;
-  height: 22px;
-  font-size: 16px;
+  height: 20px;
+  font-size: 15px;
   text-decoration: none;
   color: #222;
 }
@@ -197,16 +183,16 @@ header .small-nav-icon {
 }
 
 /* Nav Media Queries -------------------------------------------------- */
-@media (max-width: 950px) {
+@media (max-width: 800px) {
   .large-nav {
     visibility: hidden;
   }
-  header .small-nav-icon {
+  .header-container .small-nav-icon {
     opacity: 1;
     visibility: visible;
     transition: opacity 1000ms;
   }
-  header .small-nav-icon.hide {
+  .header-container .small-nav-icon.hide {
     opacity: 0;
     visibility: hidden;
     transition: opacity 1000ms;
@@ -216,30 +202,45 @@ header .small-nav-icon {
     visibility: visible;
     transition: opacity 1000ms;
   }
+  .header-container .header-contact {
+    top: 15px;
+    right: 50px;
+    font-size: 0;
+  }
+  .header-container .header-contact li {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+  }
+  .header-container .header-contact .spacer {
+    display: none;
+  }
 }
-@media (max-width: 680px) {
-  header {
-    height: 15vw;
+@media (max-width: 600px) {
+  .header-container {
+    height: 90px;
   }
-  .header-branding {
-    padding-top: 2vw;
-    padding-left: 2vw;
+  .header-container .logo {
+    width: 325px;
+    bottom: 20px;
+    left: 3%;
   }
-  .header-branding .logo {
-    width: 82%;
+  .header-container .header-contact {
+    top: 7px;
+    right: 3%;
   }
-  .header-contact {
-    visibility: hidden;
+  .header-container .header-contact li {
+    font-size: 12px;
   }
-  header .small-nav-icon {
-    bottom: 2.5vw;
-    right: 4vw;
+  .header-container .small-nav-icon {
+    bottom: 10px;
+    right: 3%;
     font-size: 20px;
     border-radius: 2px;
     padding-bottom: 4px;
   }
   .small-nav {
-    top: 16vw;
+    top: 95px;
   }
   .small-nav .nav-close {
     top: 6px;
@@ -248,7 +249,12 @@ header .small-nav-icon {
     padding-top: 2px;
   }
 }
-
+@media (max-width: 450px) {
+  .header-container .logo {
+    width: 78%;
+    bottom: 10px;
+  }
+}
 
 /* Home Page ---------------------------------------------------------- */
 .main-container-home {
@@ -291,7 +297,7 @@ header .small-nav-icon {
 }
 .main-container-home .photo-container .photo-description {
   width: 80%;
-  font-size: 15px;
+  font-size: 14px;
   margin: 0 auto;
   padding-top: 10px;
 }
@@ -299,9 +305,9 @@ header .small-nav-icon {
 /* Icon Section ---------------------------------------------------------- */
 .icon-container-home {
   position: relative;
-  width: 94%;
+  width: 92%;
   height: auto;
-  padding: 0px 3%;
+  padding: 0px 4%;
   background-color: #555;
   font-size: 0;
 }
@@ -323,9 +329,9 @@ header .small-nav-icon {
 }
 .icon-container-home .icon-container .content-icon {
   position: relative;
-  font-size: 6vw;
-  width: 7vw;
-  height: 7vw;
+  font-size: 5vw;
+  width: 6vw;
+  height: 6vw;
   border: solid 2px #f7931e;
   border-radius: 50%;
   padding-top: 2vw;
@@ -337,7 +343,7 @@ header .small-nav-icon {
 }
 .icon-container-home .icon-container .icon-title {
   position: relative;
-  font-size: 16px;
+  font-size: 15px;
   padding-top: 20px;
 }
 .icon-container-home .icon-container.icon-1 {
@@ -382,13 +388,13 @@ header .small-nav-icon {
 }
 
 /* Home Page Media Queries -------------------------------------------------- */
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   .main-container-home {
     padding-top: 15px;
   }
   .main-container-home .photo-container {
     display: block;
-    width: 300px;
+    width: 400px;
     max-width: 80%;
     height: auto;
     margin: 0 auto;
@@ -396,7 +402,7 @@ header .small-nav-icon {
   }
   .main-container-home .photo-container .photo-clipper {
     width: 100%;
-    height: 200px;
+    height: 270px;
     overflow: hidden;
   }
   .main-container-home .photo-container .photo-clipper .photo {
@@ -423,7 +429,7 @@ header .small-nav-icon {
     padding-top: 25px;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 545px) {
   .main-container-home .photo-container .photo-clipper {
     height: 48vw;
   }
@@ -449,8 +455,9 @@ header .small-nav-icon {
 
 /* Work Page -------------------------------------------------------- */
 .title-container-work {
-  height: 6.2vw;
-  line-height: 6.8vw;
+  position: relative;
+  height: 6.8vw;
+  line-height: 7.5vw;
   font-size: 8vw;
   opacity: .1;
   overflow-y: hidden;
@@ -506,13 +513,46 @@ header .small-nav-icon {
   transition-delay: 200ms;
 }
 
+/* Work Page Media Queries -------------------------------------------------- */
+@media (max-width: 800px) {
+  .title-container-work {
+    line-height: 10vw;
+    overflow-y: visible;
+  }
+  .main-container-work {
+    padding-top: 3vw;
+  }
+  .main-container-work .photo-container {
+    width: 50%;
+    height: 32vw;
+  }
+  .main-container-work .photo-container .photo {
+    filter: sepia(0);
+  }
+  .main-container-work .photo-container .photo.hover {
+    filter: saturate(1);
+  }
+  .main-container-work .photo-container .photo-description {
+    height: 30px;
+    visibility: visible;
+    opacity: .5;
+    line-height: 30px;
+  }
+}
+@media (max-width: 400px) {
+  .main-container-work .photo-container {
+    width: 100%;
+    height: 63vw;
+  }
+}
+
 /* Video Page --------------------------------------------------------- */
 .title-container-video {
-  height: 6.2vw;
+  height: 6.8vw;
   width: 70%;
-  line-height: 6.8vw;
+  line-height: 7.5vw;
   font-size: 8vw;
-  opacity: .08;
+  opacity: .1;
   overflow-y: hidden;
   letter-spacing: 2vw;
   text-align: center;
@@ -532,12 +572,12 @@ header .small-nav-icon {
 .container-video-border {
   position: absolute;
   height: 46vw;
-  border-right: 2px solid rgba(224, 172, 31, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
   right: 30%;
   top: 0;
 }
 .video-container {
-  height: 40vw;
+  height: 100%;
 }
 .side-container-video {
   position: relative;
@@ -550,8 +590,7 @@ header .small-nav-icon {
 .side-container-video-title {
   position: relative;
   display: block;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 0;
   width: 100%;
   font-size: 14px;
   text-align: left;
@@ -559,6 +598,9 @@ header .small-nav-icon {
 .side-container-video-item {
   position: relative;
   margin-bottom: 12px;
+}
+.side-container-video-item a {
+  text-decoration: none;
 }
 .side-container-video-thumbnail {
   position: relative;
@@ -574,12 +616,52 @@ header .small-nav-icon {
   text-align: left;
   color: #222;
   vertical-align: top;
-  /*top: 15px;*/
 }
 .side-container-video-description.this-video {
   color: rgba(224, 172, 31, 0.8);
 }
 
+/* Video Page Media Queries -------------------------------------------------- */
+@media (max-width: 800px) {
+  .main-container-video {
+    width: 100%;
+    height: 55vw;
+  }
+  .container-video-border {
+    display: none;
+  }
+  .side-container-video {
+    display: block;
+    width: 80%;
+    height: auto;
+    padding: 0 10%;
+    font-size: 0;
+  }
+  .side-container-video-title {
+    margin-bottom: 1.5vw;
+  }
+  .side-container-video-item {
+    display: inline-block;
+    width: 16.6%;
+    margin-bottom: 0;
+  }
+  .side-container-video-thumbnail {
+    display: block;
+    width: 100%;
+    height: 8vw;
+  }
+  .side-container-video-description {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .side-container-video-item {
+    width: 33.3%;
+  }
+  .side-container-video-thumbnail {
+    height: 16vw;
+  }
+}
 
 /* Footer ------------------------------------------------------------- */
 .footer-container {
@@ -629,7 +711,7 @@ header .small-nav-icon {
   text-decoration: none;
   color: #ddd;
   line-height: 60px;
-  font-size: 24px;
+  font-size: 20px;
 }
 .footer-branding {
   position: absolute;
@@ -644,7 +726,7 @@ header .small-nav-icon {
   position: relative;
   line-height: 60px;
   color: #ddd;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* Footer Media Queries -------------------------------------------------- */
