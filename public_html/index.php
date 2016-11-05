@@ -1,8 +1,8 @@
-
-<?php $siteroot = '/mediabound-studios/public_html'; ?>
-<?php $resources = '/mediabound-studios/resources'; ?>
 <?php $siteroot = '/public_html'; ?>
 <?php $resources = '/resources'; ?>
+<?php $siteroot = '/mediabound-studios/public_html'; ?>
+<?php $resources = '/mediabound-studios/resources'; ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@
         <?php include '../resources/templates/header.php'; ?>
       </header>
       <main>
-        <section class="main-container-home">
+        <section class="centering-container main-container-home">
           <div class="photo-container">
             <div class="photo-clipper">
               <img class="photo" src="<?= $resources; ?>/library/images/jets.png">
@@ -45,7 +45,8 @@
             <p class="photo-description">Our philosophy on business. The beliefs and ethics that are behind MediaBound Studios.</p>
           </div>
         </section>
-        <section class="icon-container-home">
+        <!-- <div class="centering-container"> -->
+        <section class="icon-container-home centering-container">
           <!-- <span class="dot dot-1"></span>
           <span class="dot dot-2"></span>
           <span class="dot dot-3"></span> -->
@@ -90,6 +91,7 @@
             </div>
           </div>
         </section>
+        <!-- <div> -->
       </main>
       <footer class="media-bound-footer">
         <?php include '../resources/templates/footer.php'; ?>

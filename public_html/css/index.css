@@ -19,6 +19,7 @@ li {
 }
 
 
+
 /* Header --------------------------------------------------------- */
 .header-container {
   position: relative;
@@ -337,7 +338,7 @@ li {
 }
 .icon-container-home .icon-container .content-icon:hover {
   color: #f7931e;
-  border: solid .04em #ddd;
+  border: solid 2px #ddd;
   transition: color 300ms, border 300ms;
 }
 .icon-container-home .icon-container .icon-title {
@@ -762,7 +763,89 @@ li {
   }
 }
 
-
+@media (min-width: 1000px) {
+  .centering-container {
+    width: 900px;
+    margin: 0 auto;
+    padding-left: calc(50vw - 450px);
+    padding-right: calc(50vw - 450px);
+  }
+  .main-container-home .photo-container .photo-clipper {
+    height: 160px;
+  }
+  .main-container-home .photo-container .photo-title {
+    padding-top: 10px;
+  }
+  .icon-container-home .icon-container .content-icon {
+    font-size: 45px;
+    width: 54px;
+    height: 54px;
+    padding-top: 16px;
+  }
+  .header-container .logo {
+    left: calc(50vw - 450px);
+  }
+  .header-container .header-contact {
+    right: calc(50vw - 450px);
+  }
+  .large-nav {
+    right: calc(50vw - 450px);
+  }
+  .footer-icons {
+    padding-left: calc(50vw - 450px);
+  }
+  .footer-branding {
+    padding-right: calc(50vw - 450px);
+  }
+  .title-container-work {
+    height: 68px;
+    line-height: 75px;
+    font-size: 80px;
+    letter-spacing: 20px;
+  }
+  .main-container-work {
+    padding-bottom: 30px;
+  }
+  .main-container-work .photo-container {
+    height: 200px;
+  }
+  .main-container-work .photo-container .photo-description {
+    height: 38px;
+    line-height: 38px;
+  }
+  .title-container-video {
+    width: 700px;
+    height: 68px;
+    line-height: 75px;
+    font-size: 80px;
+    letter-spacing: 20px;
+    padding-left: calc(50vw - 480px);
+  }
+  .background-container-video {
+    padding: 30px 0;
+    padding-left: calc(50vw - 450px);
+    padding-right: calc(50vw - 450px);
+  }
+  .main-container-video {
+    height: 400px;
+    width: 75%;
+  }
+  .container-video-border {
+    height: 460px;
+    right: calc(50vw - 225px);
+  }
+  .side-container-video {
+    height: 400px;
+    width: 20%;
+  }
+  .side-container-video-thumbnail {
+    width: 30%;
+  }
+  .side-container-video-description {
+    width: 65%;
+    padding-left: 5%;
+  }
+}
 
 
 

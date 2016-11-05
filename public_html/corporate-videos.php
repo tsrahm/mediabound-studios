@@ -1,9 +1,9 @@
 
-
-<?php $siteroot = '/mediabound-studios/public_html'; ?>
-<?php $resources = '/mediabound-studios/resources'; ?>
 <?php $siteroot = '/public_html'; ?>
 <?php $resources = '/resources'; ?>
+<?php $siteroot = '/mediabound-studios/public_html'; ?>
+<?php $resources = '/mediabound-studios/resources'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,7 +23,7 @@
       </header>
       <main>
         <div class="title-container-work">Corporate Videos</div>
-        <section class="main-container-work">
+        <section class="main-container-work centering-container">
           <div class="photo-container">
             <a href="<?= $siteroot; ?>/corporate-videos/video-1.php"><img class="photo" src="<?= $resources; ?>/library/images/jets.png"></a>
             <span class="photo-description">Description</span>
