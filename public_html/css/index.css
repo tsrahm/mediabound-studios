@@ -293,13 +293,12 @@ li {
 .main-container-home .photo-container .photo-title {
   font-size: 18px;
   margin: 0;
-  padding-top: 6px;
+  padding-top: 1vw;
 }
 .main-container-home .photo-container .photo-description {
   width: 80%;
   font-size: 14px;
   margin: 0 auto;
-  padding-top: 10px;
 }
 
 /* Icon Section ---------------------------------------------------------- */
@@ -334,7 +333,7 @@ li {
   height: 6vw;
   border: solid 2px #f7931e;
   border-radius: 50%;
-  padding-top: 2vw;
+  padding-top: 1.8vw;
 }
 .icon-container-home .icon-container .content-icon:hover {
   color: #f7931e;

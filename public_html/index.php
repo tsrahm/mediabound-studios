@@ -15,10 +15,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="">
     <link rel="stylesheet" type="text/css" href="<?= $siteroot; ?>/css/index.css">
     <script src="https://use.fontawesome.com/d343e84307.js"></script>
-<!--
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-custom2.min.css">
-    <script type="text/javascript" async="async" defer="defer" src="/application.js"></script>
--->
   </head>
   <body>
     <div class="container">
